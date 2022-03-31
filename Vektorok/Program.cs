@@ -31,6 +31,11 @@ namespace Vektorok
             this.number = number;
         }
 
+        public Binaris()
+        {
+            this.number = "";
+        }
+
         public void CountOne(string number)
         {
             bool onlyBin = true;
@@ -51,7 +56,10 @@ namespace Vektorok
                     db++;
                 }
             }
-            Console.WriteLine("A megadott számsorozatban {0} db 1-es számjegy található", db);
+            if (onlyBin == true)
+            {
+                Console.WriteLine("A megadott számsorozatban {0} db 1-es számjegy található", db);
+            }
         }
     }
     class Program
@@ -65,7 +73,10 @@ namespace Vektorok
 
             string szam;
             Console.WriteLine("Adj meg egy bináris számsort: ");
-            //Binaris.Coun
+            szam = Console.ReadLine();
+            Binaris.CountOne(szam);
+
+            Console.ReadLine();
         }
     }
 }
