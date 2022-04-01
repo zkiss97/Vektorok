@@ -87,14 +87,50 @@ namespace Vektorok
             }
         }
     }
+
+    class Lotto
+    {
+        private int[] numbers = new int[5];
+        Random rnd = new Random();
+
+        public void Nyeroszamok()
+        {
+            Console.WriteLine("Az ötös lottó e heti nyerőszámai:");
+
+            for( int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = rnd.Next(1, 100);
+                Console.WriteLine(numbers[i]);
+            }
+        }
+    }
+
+    class Menu
+    {
+        private int button;
+
+        public Menu(int button)
+        {
+            this.button = button;
+        }
+
+        public void Nyomogombok(int button)
+        {
+            Console.WriteLine("Menüü juhééj");
+            while ()
+            {
+                switch //...
+            }
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
             // 1. Sorozatok
             Sorozatok s1 = new Sorozatok();
-            s1.Feltolt();
-            s1.Szamtani();
+            //s1.Feltolt();
+            //s1.Szamtani();
 
             // 2. Bináris
 
@@ -106,7 +142,13 @@ namespace Vektorok
             b1.CountOne(szam);
             */
 
+            // 3. Lottó
+            /*
+            Lotto l1 = new Lotto();
+            l1.Nyeroszamok();
+            */
 
+            // 4. Menü
 
 
             Console.ReadLine();
