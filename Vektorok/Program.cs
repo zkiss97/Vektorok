@@ -114,14 +114,81 @@ namespace Vektorok
             this.button = button;
         }
 
-        public void Nyomogombok(int button)
+        public Menu()
+        {
+            this.button = 0;
+        }
+
+
+        public void Nyomogombok()
         {
             Console.WriteLine("Menüü juhééj");
-            while ()
+            button = 0;
+            while (button != 5)
             {
-                switch //...
+                button = int.Parse(Console.ReadLine());
+                if ((button > 5) || (button < 1))
+                {
+                    Console.WriteLine("Érvénytelen");
+                }
+                switch (button)
+                {
+                    case 1:
+                        Console.WriteLine("Első menüpont");
+                        break;
+                    case 2:
+                        Console.WriteLine("Második menüpont");
+                        break;
+                    case 3:
+                        Console.WriteLine("Harmadik menüpont");
+                        break;
+                    case 4:
+                        Console.WriteLine("Negyedik menüpont");
+                        break;
+                    case 5:
+                        Console.WriteLine("Kilépés");
+                        break;
+                }
             }
         }
+    }
+
+    class Kettes
+    {
+        private int tizesInput;
+        private string kettesOutput;
+
+        public Kettes(int tizesInput, string kettesOutput)
+        {
+            this.tizesInput = tizesInput;
+            this.kettesOutput = kettesOutput;
+        }
+
+        public Kettes()
+        {
+            this.tizesInput = 0;
+            this.kettesOutput = "";
+        }
+
+
+
+        public void Atvalto(int tizesInput)
+        {
+            Console.WriteLine("Adj meg egy decimális számot:");
+            tizesInput = int.Parse(Console.ReadLine());
+            int maradek = 0;
+            int ch = 0;
+
+            while (tizesInput != 1)
+            {
+                maradek = tizesInput % 2;
+                kettesOutput[ch] = maradek;
+                ch++;
+            }
+
+
+        }
+
     }
     class Program
     {
@@ -149,7 +216,12 @@ namespace Vektorok
             */
 
             // 4. Menü
+            /*
+            Menu m1 = new Menu();
+            m1.Nyomogombok();
+            */
 
+            // 5. Kettes
 
             Console.ReadLine();
         }
