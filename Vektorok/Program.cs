@@ -184,8 +184,17 @@ namespace Vektorok
                 maradek = tizesInput % 2;
                 kettesOutput[ch] = maradek;
                 ch++;
+                Console.WriteLine(maradek);
             }
 
+            char[] eredmeny = new string[ch];
+            for (int i = 0, j = eredmeny.Length; i < eredmeny.Length; i++, j--)
+            {
+                eredmeny[i] = kettesOutput[j];
+            }
+
+            Console.WriteLine("A szám átváltva:");
+            Console.WriteLine(eredmeny);
 
         }
 
@@ -195,7 +204,7 @@ namespace Vektorok
         static void Main(string[] args)
         {
             // 1. Sorozatok
-            Sorozatok s1 = new Sorozatok();
+            //Sorozatok s1 = new Sorozatok();
             //s1.Feltolt();
             //s1.Szamtani();
 
@@ -222,6 +231,9 @@ namespace Vektorok
             */
 
             // 5. Kettes
+
+            Kettes k1 = new Kettes();
+            k1.Atvalto(int.Parse(Console.ReadLine()));
 
             Console.ReadLine();
         }
